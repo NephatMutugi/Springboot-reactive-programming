@@ -23,6 +23,9 @@ public class CustomerDao {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * Use this thread to sleep the working thread for one second.
+     * This is useful in demonstrating the blocking nature of sync processing*/
     private static void sleepThread(int milliseconds){
         try {
             Thread.sleep(1000);
