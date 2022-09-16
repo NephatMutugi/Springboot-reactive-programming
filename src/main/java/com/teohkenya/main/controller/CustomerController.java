@@ -27,12 +27,12 @@ public class CustomerController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Customer>> getAllCustomers(){
+    public ResponseEntity<List<Customer>> getAllCustomers() {
         return customerService.loadAllCustomers();
     }
 
     @GetMapping(value = "/stream", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-    public  ResponseEntity<Flux<Customer>> streamCustomers(){
+    public ResponseEntity<Flux<Customer>> streamCustomers() {
         return customerService.loadAllCustomersStream();
     }
 }
